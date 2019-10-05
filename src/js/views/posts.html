@@ -1,0 +1,27 @@
+<div id="sampleDemo" style="" class="demo-padding demo-container">
+    <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+      
+      <oj-list-view id="listview" aria-label="list using collection" style="width:100%;height:95vh;min-height:300px;overflow-x:hidden"
+             data="[[dataProvider]]"
+             selection-mode="single"
+             scroll-policy="loadMoreOnScroll" scroll-policy-options.fetch-size="15">
+          <template slot="itemTemplate" data-oj-as="item">
+              <div class="oj-flex" style="flex-wrap: nowrap">
+                  <span class="demo-thumbnail oj-flex-item" style="background-image: url('../images/listView/oracle.gif')"></span>
+                  <div class="demo-content oj-flex-item">
+                      <div>
+                          <strong><oj-bind-text value="[[item.data.name]]"></oj-bind-text></strong>
+                          <span class="demo-username"><oj-bind-text value="[['@' + item.data.screen_name]]"></oj-bind-text></span>
+                      </div>
+                      <div class="demo-tweet">
+                          <span style="word-wrap: break-word"><oj-bind-text value="[[item.data.text]]"></oj-bind-text></span> <a :href="[[item.data.source]]"><oj-bind-text value="[[item.data.source]]"></oj-bind-text></a>
+                      </div>        
+                      <span class="demo-metadata"><oj-bind-text value="[[item.data.created_at]]"></oj-bind-text></span>
+                  </div>
+              </div>
+          </template>
+      </oj-list-view>
+
+      
+    </div>
+  </div>
