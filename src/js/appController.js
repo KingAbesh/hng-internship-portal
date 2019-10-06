@@ -48,7 +48,7 @@ define([
       dashboard: { label: "Dashboard" },
       admin_dashboard: { label: "Admin_dashboard" },
       register: { label: "Register" },
-      posts: { label: "Posts" },
+      categories: { label: "Categories" },
       submission: { label: "Submission" },
       login: { label: "Login", isDefault: true },
       profile: { label: "User Profile" },
